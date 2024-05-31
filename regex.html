@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="u_name" placeholder="Enter Name">
+    <p id="error_msg"></p>
+    <input type="text" name="" id="u_email" placeholder="Enter E-mail">
+    <p id="error_msg"></p>
+    <input type="text" name="" id="u_num" placeholder="Enter Number">
+    <p id="error_msg"></p>
+    <button type="submit" onclick="regex()">Submit</button>
+
+
+<script>
+    function regex() {
+        var user_name = document.getElementById("u_name").value;
+        var user_email = document.getElementById("u_email").value;
+        var user_number = document.getElementById("u_num").value;
+        var exp_name = /^[A-z ]{3,20}$/gm;
+        var exp_num = /^[0-9-+]{3,20}$/gm;
+        var exp_email = /^[A-z.0-9]{3,}@[A-z]{3,10}.[A-z]{2,6}$/gm;
+
+        if (exp_name.test(user_name) && exp_email.test(user_email) && exp_num.test(user_number) ) {
+            document.getElementById("error_msg").innerHTML = "Valid"
+            document.getElementById("error_msg").style.color = "green"
+        } 
+        else{
+            document.getElementsByTagName("p").innerHTML = "Invalid"
+            document.getElementsByTagName("p").style.color = "red"
+        }
+    }
+</script>
+
+</body>
+</html>

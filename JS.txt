@@ -1,0 +1,47 @@
+Functions:
+block of code that perform a specific task and can be invoked whenever needed
+
+built -in function
+alert() , prompt() , parseInt() , parseFloat()
+
+
+1. simple function
+2. parameterized function
+3. return type function
+4. arrow function
+
+
+#syntax simple function
+
+function funcname(){
+//statement
+}
+
+#syntax parameterized function
+//params act as a varaiable
+function funcnanme(params){
+//statement
+// local variable
+}
+
+//global variable
+
+
+#syntax return type
+
+function funcname(params){
+//statement
+return params;
+}
+
+#syntax arrow function 
+var store = (params)=>{
+//statement
+}
+
+Difference
+arrow function stores in a variable to call it.
+arrow function doesn't need function key word.
+arrow function is the compact way of writing a function
+arrow function release in ES6 javascript version
+arrow function need arrow in its syntax

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text" name="" id="fruit_name">
+    <p id="fr_name"></p>
+    <button type="submit" onclick="fruits()">Search</button> -->
+
+
+    <input type="text" name="" id="f_name">
+    <p id="print_fruits"></p>
+    <button type="submit" onclick="addFruit()">Add</button>
+    <button type="submit" onclick="displayFruit()">Display</button>
+
+
+    <script>
+
+
+function addFruit() {
+    fruits = [];
+    var fruit_name = document.getElementById("f_name").value;
+    fruits.push(fruit_name);
+    console.log(fruits);
+
+}
+
+function displayFruit() {
+    for (let i = 0; i < fruits.length; i++) {
+        document.getElementById("print_fruits").innerHTML += fruits[i] + "";        
+        
+    }
+}
+
+
+a += 3
+a = a+3
+a= 3+3
+a = 6
+
+// function fruits() {
+//     var fruits = ["Banana" , "Mango" , "Orange" , "Grapes" , "Pineapple" , "Watermelon"];
+//     var fname = document.getElementById("fruit_name").value;
+//     if (fruits.includes(fname)) {
+//         document.getElementById('fr_name').innerHTML = "Fruits Found"
+//     } else {
+//         document.getElementById('fr_name').innerHTML = "Fruits Not Found"
+        
+//     }
+// }
+
+
+    //     var num = [85, 97 , 44 , 37 , 76 , 60];
+    //     var sum = 0 ;
+    //     for (const val of num) {
+    //         sum+=val
+    //     }
+    //    var avg = sum/num.length;
+    //    console.log(avg);
+
+
+//     var items = [250 , 645 , 300 , 900 , 50];
+//     for (let i = 0; i < items.length; i++) {
+//        var offer = items[i]/10;
+//        items[i]-=offer
+       
+        
+//     }
+// console.log(items);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

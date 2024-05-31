@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Document Object Model -->
+ <!-- getelemetbyid , getelementbyclass, getelementbytagname , getelementbytag-->
+
+<input type="text" name="" id="fname">
+
+<button type="submit" onclick="funcname()">Submit</button>
+<p id="print"></p>
+<script>
+    function funcname() {
+        var name = document.getElementById("fname").value;
+document.getElementById("print").innerHTML = name;
+document.getElementById("print").style.color = "red";
+    }
+</script>
+
+</body>
+</html>

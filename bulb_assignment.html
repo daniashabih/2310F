@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/off.png" width="300px" height="450px" alt="off" id="myImg" onclick="change_image()">
+
+
+
+<script>
+    function change_image() {
+       var imgText = document.getElementById('myImg').alt; 
+       if (imgText == "off") {
+        document.getElementById("myImg").src = "images/on.png";
+        document.getElementById("myImg").alt = "on"
+       } else {
+        document.getElementById("myImg").src = "images/off.png";
+        document.getElementById("myImg").alt = "off"
+       }
+    }
+</script>
+
+</body>
+</html>
