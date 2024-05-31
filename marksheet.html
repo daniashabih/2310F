@@ -1,18 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <form action="">
-        <input type="text" name="" id="" placeholder="Enter Name">
-        <input type="text" name="" id="" placeholder="Enter Batch">
-        <input type="text" name="" id="" placeholder="Enter Semester">
-        <input type="text" name="" id="" placeholder="Enter Html Marks">
-        <input type="text" name="" id="" placeholder="Enter CSS Marks">
-        <input type="text" name="" id="" placeholder="Enter JS Marks">
-    </form>
+  
+        <input type="text" name="" id="s_name" placeholder="Enter Name">
+        <input type="text" name="" id="s_batch" placeholder="Enter Batch">
+        <input type="text" name="" id="s_sem" placeholder="Enter Semester">
+        <input type="text" name="" id="s_html" placeholder="Enter Html Marks">
+        <input type="text" name="" id="s_css" placeholder="Enter CSS Marks">
+        <input type="text" name="" id="s_js" placeholder="Enter JS Marks">
+        <button type="submit" onclick="marksheet()">Submit</button>
+
+
+
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Batch</th>
+        <th>Semester</th>
+        <th>Html</th>
+        <th>CSS</th>
+        <th>JS</th>
+        <th>Obtained</th>
+        <th>Percentage</th>
+        <th>Grade</th>
+    </tr>
+    <tr>
+        <td id="p_name"></td>
+        <td id="p_batch"></td>
+        <td id="p_sem"></td>
+        <td id="p_html"></td>
+        <td id="p_css"></td>
+        <td id="p_js"></td>
+        <td id="ob"></td>
+        <td id="per"></td>
+        <td id="grade"></td>
+    </tr>
+</table>
+
+
+<script>
+
+function marksheet() {
+  var name =  document.getElementById("s_name").value;
+  document.getElementById("p_name").innerHTML = name;
+  var batch =  document.getElementById("s_batch").value;
+  document.getElementById("p_batch").innerHTML = batch;
+  var semester =  document.getElementById("s_sem").value;
+  document.getElementById("p_sem").innerHTML = semester;
+  var html =  document.getElementById("s_html").value;
+  document.getElementById("p_html").innerHTML = html;
+  var css =  document.getElementById("s_css").value;
+  document.getElementById("p_css").innerHTML = css;
+  var js =  document.getElementById("s_js").value;
+  document.getElementById("p_js").innerHTML = js;
+  var ob_marks = parseInt(html)+parseInt(css)+parseInt(js);
+  document.getElementById("ob").innerHTML = ob_marks;
+  var per = ((ob_marks/300)*100).toFixed(2);
+  document.getElementById("per").innerHTML = per + "%";
+  if(per >= 80){
+    document.getElementById("grade").innerHTML = "A+";
+  }
+    else if(per <= 80 && per >= 70){
+        document.getElementById("grade").innerHTML = "A";
+    }
+    else if(per <= 70 && per >= 60){
+        document.getElementById("grade").innerHTML = "B";
+    }
+    else if(per <= 60 && per >= 50){
+        document.getElementById("grade").innerHTML = "C";
+    }
+    else if(per <= 50 && per >= 40){
+        document.getElementById("grade").innerHTML = "D";
+    }
+    else{
+        document.getElementById("grade").innerHTML = "Fail";
+    }
+
+}
+
+
+
+</script>
+
+
+
 </body>
+
 </html>
